@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "misa-akmc-users-manual"
+version = "0.1.0"
+description = "Users Manual for MISA-AKMC"
+authors = ["genshen <genshenchu@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+mkdocs-material = "^6.1.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
