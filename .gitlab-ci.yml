@@ -19,8 +19,9 @@ build:
   variables:
     POETRY_VIRTUALENVS_IN_PROJECT: "true"
   before_script:
-    - pip install poetry
+    - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple poetry
     - poetry --version
+    - poetry config repositories.pypi https://pypi.tuna.tsinghua.edu.cn/simple
     - poetry install -vv
   script:
     - poetry run mkdocs build
