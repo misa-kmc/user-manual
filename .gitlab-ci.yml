@@ -1,0 +1,45 @@
+variables:
+  PIP_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/pip"
+
+cache:
+  key: "${CI_JOB_NAME}"
+  paths:
+    - .cache/pip
+    - .venv
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: python:3.7
+  tags:
+    - pages
+  variables:
+    POETRY_VIRTUALENVS_IN_PROJECT: "true"
+  before_script:
+    - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple poetry
+    - poetry --version
+    - poetry config repositories.pypi https://pypi.tuna.tsinghua.edu.cn/simple
+    - poetry install -vv
+  script:
+    - poetry run mkdocs build
+  artifacts:
+    paths:
+    - site
+
+pages:
+  stage: deploy
+  tags:
+    - pages
+  dependencies:
+    - build
+  script:
+    - mv site public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+    - develop
