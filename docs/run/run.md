@@ -9,7 +9,7 @@ sidebar_label: "运行 MISA-AKMC"
 ## 1.运行
 你可以使用 `mpirun` 命令运行并行的 MISA-AKMC 分子动力学软件。例如，在下面的示例中，使用4个 MPI 进程运行 MISA-AKMC, 并指定配置文件路径为 `$AKMC_PATH/example/config.yaml` 文件。
 
-?> 关于配置文件的相关说明可参考**配置项**等相关章节。
+?> 关于配置文件的相关说明可参考[**配置项说明**](https://hpcer.pages.hpcer.dev/misa-akmc/users-manual/reference/reference/)等相关章节。
 
 ```bash
 cd $AKMC_PATH/example
