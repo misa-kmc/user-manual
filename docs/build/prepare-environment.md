@@ -5,6 +5,7 @@ sidebar_label: "准备环境"
 ---
 
 在 Linux 上构建 MISA-AKMC 之前，请确保你的系统中已安装以下构建工具：
+
 - [CMake](http://cmake.org), 3.0 及以上版本;
 - 支持 C++11 特性的 C++ 编译器;
 - MPI 环境;
@@ -18,6 +19,7 @@ sidebar_label: "准备环境"
 各类编译器对 C++11 特性的支持情况可参考[相关文档](http://zh.cppreference.com/w/cpp/compiler_support#cpp11})。
 
 我们测试过以下编译器可以正常工作：
+
 - GUN g++ 5.1及以后版本
 - LLVM Clang++ 3.3及以上版本
 - Intel icc 2017
