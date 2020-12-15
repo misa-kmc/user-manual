@@ -14,7 +14,7 @@
     
     
       
-        <title>运行 - MISA-AKMC Users Manual</title>
+        <title>运行 MISA-AKMC - MISA-AKMC Users Manual</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              运行
+              运行 MISA-AKMC
             
           </span>
         </div>
@@ -165,7 +165,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../overview/" class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         首页
       </a>
     </li>
@@ -178,7 +178,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../build/build/" class="md-tabs__link">
+      <a href="../../build/prepare-environment/" class="md-tabs__link">
         编译构建
       </a>
     </li>
@@ -279,7 +279,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../overview/" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       概览
     </a>
   </li>
@@ -291,8 +291,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../publications/" class="md-nav__link">
-      Publications
+    <a href="../../quick-start/" class="md-nav__link">
+      快速开始
     </a>
   </li>
 
@@ -321,6 +321,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/prepare-environment/" class="md-nav__link">
+      准备环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/get-source-code/" class="md-nav__link">
+      获取源码
+    </a>
+  </li>
+
         
           
           
@@ -372,12 +396,44 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        运行
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       运行
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.运行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.运行结果
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -438,8 +494,28 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.运行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.运行结果
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -456,7 +532,32 @@
                   </a>
                 
                 
-                <h1 id="_1">运行<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+                  <h1>运行</h1>
+                
+                <p>我们假设你已通过上述步骤完成了 MISA-AKMC 的编译构建工作，编译完成的二进制可执行文件位于 <code>$AKMC_PATH/build/bin/</code> 目录下。</p>
+<h2 id="1">1.运行<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>你可以使用 <code>mpirun</code> 命令运行并行的 MISA-AKMC 分子动力学软件。例如，在下面的示例中，使用4个 MPI 进程运行 MISA-AKMC, 并指定配置文件路径为 <code>$AKMC_PATH/example/config.yaml</code> 文件。</p>
+<p>?&gt; 关于配置文件的相关说明可参考<a href="https://hpcer.pages.hpcer.dev/misa-akmc/users-manual/reference/reference/"><strong>配置项说明</strong></a>等相关章节。</p>
+<pre><code class="language-bash">cd $AKMC_PATH/example
+mpirun -n 4 ../build/bin/pmisa-kmc -c config.yaml
+</code></pre>
+<p>更多信息可以通过执行<code>$AKMC_PATH/build/bin/pmisa-kmc --help</code>命令查看。</p>
+<pre><code class="language-bash">$ cd $AKMC_PATH
+$ build/bin/pmisa-kmc --help
+  build/bin/pmisa-kmc {OPTIONS}
+
+    This is parallel misa-kmc program.
+
+  OPTIONS:
+
+      -h, --help                        Display this help menu
+      -c[conf], --conf=[conf]           The configure file
+      -v, --version                     show version number
+</code></pre>
+<h2 id="2">2.运行结果<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>运行完成后， example 目录中会生成名为 kmc.*.out 的二进制文件( kmc.*.out 为默认的输出文件名称，可在配置文件中更改)。该文件中包含各个指定时间步 dump 的所有原子信息，如原子类型、位置坐标等。</p>
+                
+                  
                 
               
               

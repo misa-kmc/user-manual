@@ -14,7 +14,7 @@
     
     
       
-        <title>编译 - MISA-AKMC Users Manual</title>
+        <title>编译构建 - MISA-AKMC Users Manual</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1-cmake" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              编译
+              编译构建
             
           </span>
         </div>
@@ -165,7 +165,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../overview/" class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         首页
       </a>
     </li>
@@ -180,7 +180,7 @@
       
         
       
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../prepare-environment/" class="md-tabs__link md-tabs__link--active">
         编译构建
       </a>
     </li>
@@ -279,7 +279,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../overview/" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       概览
     </a>
   </li>
@@ -291,8 +291,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../publications/" class="md-nav__link">
-      Publications
+    <a href="../../quick-start/" class="md-nav__link">
+      快速开始
     </a>
   </li>
 
@@ -328,6 +328,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../prepare-environment/" class="md-nav__link">
+      准备环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../get-source-code/" class="md-nav__link">
+      获取源码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -335,12 +359,44 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        编译
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       编译
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-cmake" class="md-nav__link">
+    1. 使用 CMake 工具编译
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 构建选项
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -438,8 +494,28 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-cmake" class="md-nav__link">
+    1. 使用 CMake 工具编译
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 构建选项
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -456,7 +532,109 @@
                   </a>
                 
                 
-                <h1 id="_1">构建<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+                  <h1>编译</h1>
+                
+                <p>MISA-AKMC 使用 CMake 工具进行编译构建，关于如何使用 CMake 工具可以参考<a href="https://cmake.org/cmake/help/v3.0/index.html">相关文档</a>。在开始进行构建之前，请确保你已完成编译环境的配置。</p>
+<h2 id="1-cmake">1. 使用 CMake 工具编译<a class="headerlink" href="#1-cmake" title="Permanent link">&para;</a></h2>
+<pre><code class="language-bash">cd $AKMC_PATH
+cmake -B ./build -H./ -DCMAKE_BUILD_TYPE=Release
+cmake --build ./build
+</code></pre>
+<p>执行上述步骤后，编译完成的可执行文件 misa-kmc 以及 pmisa-kmc 以及相关的测试程序均置于 <code>$AKMC_PATH/build/bin</code> 目录</p>
+<h2 id="2">2. 构建选项<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>如果你需要将编译完成的二进制文件安装至指定目录，可使用以下命令进行构建并安装：</p>
+<pre><code class="language-bash">cd $AKMC_PATH
+cmake -B./build -H./ -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/your/desirable/path/ 
+cmake --build ./build
+cmake --build ./build --target install # install
+</code></pre>
+<p>在执行 cmake 命令的时候，可以指定 CMake 构建工具内置的参数，详细的参数列表可以参考<a href="https://cmake.org/cmake/help/v3.0/manual/cmake-variables.7.html">相关文档</a>，还可以使用以下参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>取值</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KMC_OpenMP_ENABLE_FLAG</td>
+<td>ON/OFF</td>
+<td>OFF</td>
+<td>是否使用 OpenMP 构建</td>
+</tr>
+<tr>
+<td>KMC_MPI_ENABLE_FLAG</td>
+<td>ON/OFF</td>
+<td>ON</td>
+<td>是否使用 MPI 构建</td>
+</tr>
+<tr>
+<td>KMC_TEST_BUILD_ENABLE_FLAG</td>
+<td>ON/OFF</td>
+<td>ON</td>
+<td>是否构建 test (单元测试)</td>
+</tr>
+<tr>
+<td>KMC_TEST_MPI_ENABLE_FLAG</td>
+<td>ON/OFF</td>
+<td>ON</td>
+<td>是否在测试中启用 MPI</td>
+</tr>
+<tr>
+<td>EAM_POT_ENABLE_FLAG</td>
+<td>ON/OFF</td>
+<td>OFF</td>
+<td>是否启用使用电子势能来计算系统能量</td>
+</tr>
+<tr>
+<td>KMC_RAND</td>
+<td>LCG/MT/STC/xoshiro/REAL</td>
+<td>MT</td>
+<td>随机数生成器</td>
+</tr>
+</tbody>
+</table>
+<p>注：其中 KMC_RAND 中的取值代表着如下方法</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LCG</td>
+<td>linear congruential</td>
+</tr>
+<tr>
+<td>MT</td>
+<td>mersenne twister</td>
+</tr>
+<tr>
+<td>STC</td>
+<td>subtract with carry</td>
+</tr>
+<tr>
+<td>xoshiro</td>
+<td>http://xoshiro.di.unimi.it</td>
+</tr>
+<tr>
+<td>REAL</td>
+<td>real random number privided by linux OS</td>
+</tr>
+</tbody>
+</table>
+<p>例如，如果你不希望构建单元测试，可以使用如下命令进行构建：</p>
+<pre><code class="language-bash">cd $AKMC_PATH
+cmake -B ./build -H./ -DKMC_TEST_BUILD_ENABLE_FLAG=OFF
+cmake --build ./build
+</code></pre>
+                
+                  
                 
               
               
@@ -475,7 +653,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../publications/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../get-source-code/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -484,7 +662,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Publications
+                获取源码
               </div>
             </div>
           </a>

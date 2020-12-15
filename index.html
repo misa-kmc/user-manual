@@ -14,7 +14,7 @@
     
     
       
-        <title>MISA-AKMC Users Manual</title>
+        <title>概览 - MISA-AKMC Users Manual</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -88,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Home
+              概览
             
           </span>
         </div>
@@ -148,7 +153,9 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -158,7 +165,9 @@
     <li class="md-tabs__item">
       
       
-      <a href="overview/" class="md-tabs__link">
+        
+      
+      <a href="." class="md-tabs__link md-tabs__link--active">
         首页
       </a>
     </li>
@@ -171,7 +180,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="build/build/" class="md-tabs__link">
+      <a href="build/prepare-environment/" class="md-tabs__link">
         编译构建
       </a>
     </li>
@@ -248,10 +257,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     <label class="md-nav__link" for="nav-1">
       首页
       <span class="md-nav__icon md-icon"></span>
@@ -268,11 +279,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="overview/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="." class="md-nav__link md-nav__link--active">
       概览
     </a>
+    
   </li>
 
         
@@ -282,8 +302,8 @@
 
 
   <li class="md-nav__item">
-    <a href="publications/" class="md-nav__link">
-      Publications
+    <a href="quick-start/" class="md-nav__link">
+      快速开始
     </a>
   </li>
 
@@ -312,6 +332,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="build/prepare-environment/" class="md-nav__link">
+      准备环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="build/get-source-code/" class="md-nav__link">
+      获取源码
+    </a>
+  </li>
+
         
           
           
@@ -411,6 +455,21 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -421,12 +480,9 @@
                   </a>
                 
                 
-                  <h1>Home</h1>
-                
-                <!-- ---
-template: overrides/home.html
-title: MISA-AKMC
---- -->
+                <h1 id="_1">概览<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><strong>MISA-AKMC</strong> 是一款面向材料缺陷演化模拟的并行动力学蒙特卡洛模拟软件，其基于原子尺度的建模方法，
+采用动力学蒙特卡洛方法对体系中的空位、间隙进行演化模拟。</p>
                 
               
               
@@ -441,6 +497,27 @@ title: MISA-AKMC
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="quick-start/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                快速开始
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

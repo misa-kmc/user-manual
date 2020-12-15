@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#references" class="md-skip">
+        <a href="#1" class="md-skip">
           Skip to content
         </a>
       
@@ -165,7 +165,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../overview/" class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         首页
       </a>
     </li>
@@ -178,7 +178,7 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../build/build/" class="md-tabs__link">
+      <a href="../../build/prepare-environment/" class="md-tabs__link">
         编译构建
       </a>
     </li>
@@ -279,7 +279,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../overview/" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       概览
     </a>
   </li>
@@ -291,8 +291,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../publications/" class="md-nav__link">
-      Publications
+    <a href="../../quick-start/" class="md-nav__link">
+      快速开始
     </a>
   </li>
 
@@ -321,6 +321,30 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/prepare-environment/" class="md-nav__link">
+      准备环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/get-source-code/" class="md-nav__link">
+      获取源码
+    </a>
+  </li>
+
         
           
           
@@ -409,12 +433,44 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        配置项说明
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       配置项说明
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.示例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.使用配置文件
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -438,8 +494,28 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.示例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.使用配置文件
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -456,7 +532,81 @@
                   </a>
                 
                 
-                <h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
+                  <h1>配置项说明</h1>
+                
+                <p>MISA-AKMC 使用 <a href="https://yaml.org">yaml</a> 格式作为配置文件的格式</p>
+<h2 id="1">1.示例<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>以下展示了 MISA-AKMC 配置文件的部分示例：</p>
+<pre><code class="language-yaml"># This is the config file of parallel kMC program.
+# file format: yaml, see https://yaml.org for mor e details.
+# config template file writen by &lt;a href='mailto:genshenchu@gmail.com'&gt;genshen&lt;/a&gt;&quot;
+
+title: &quot;parallel kMC configure file&quot;
+version: &quot;0.1.0&quot;
+
+box:
+  size: [80, 80, 80]
+  lattice_const: 2.85532   # lattice constance
+  cutoff_radius: 5.6
+
+create: # how the simulation box is created.
+  random:
+    enable: true
+    va_count: 1   # vacancy number, not percent.
+    alloy:
+      Fe: 9598
+      Cu: 134
+      Mn: 134
+      Ni: 134
+      FeFe: 0 # pair number of [110] dumbbell.
+      FeCu: 0
+      FeMn: 0
+      FeNi: 0
+      CuCu: 0
+      CuNi: 0
+      CuMn: 0
+      NiNi: 0
+      NiMn: 0
+      MnMn: 0
+  pipe: # if create_box is set to false or not set, then pipe will be used.
+    enable: false
+    input_box: last_frame.xyz # pipe from MD.
+  restart:
+    enable: false
+    file_path: 1072.xyz
+
+seeds:
+  seeds_file: &quot;&quot; # used for setting different seed for each MPI rank (todo)
+  create_types: 100565 # if 0 is set, random device will be used.
+  create_vacancy: 16650
+  event_selection: 563264
+  time_inc: 594689
+
+simulation:
+  temperature: 673  # unit: K
+  physics_time: 8e4  # physics time limit.
+  steps_limit: 1000 # limit of kMC steps.
+  attempt_freq: 6e12 #  unit:  1/s
+  isgenr: false
+  dpasm1: 3e-9 # dpa per second, unit: dpa/s
+
+output:
+  dump:
+    interval: 100 # dump system lattice information.
+    file_path: &quot;kmc.{}.out&quot;
+  logs:
+    interval: 10 # if zero is set, it means no log.
+    logs_file: &quot;&quot; # if it is empty, log to /dev/console
+</code></pre>
+<h2 id="2">2.使用配置文件<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>你可以在运行 MISA-AKMC 程序时，通过命令行参数配置文件路径，程序可以读取配置文件，以进行后续模拟，例如：</p>
+<pre><code class="language-bash">mpirun -n 4 /path/of/pmisa-akmc -c /path/of/config.yaml
+</code></pre>
+<p>或者：</p>
+<pre><code class="language-bash">mpirun -n 4 /path/of/pmisa-akmc --conf=/path/of/config.yaml
+</code></pre>
+                
+                  
                 
               
               
