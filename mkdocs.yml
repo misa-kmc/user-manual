@@ -24,9 +24,12 @@ markdown_extensions:
 
 nav:
   - 首页: 
-    - overview.md
-    - publications.md
+    - 概览: index.md
+    - 快速开始: quick-start.md
+    # - publications.md
   - 编译构建:
+    - 准备环境: build/prepare-environment.md
+    - 获取源码: build/get-source-code.md
     - 编译: build/build.md
   - 运行:
     - 运行: run/run.md
