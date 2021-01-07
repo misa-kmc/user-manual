@@ -538,22 +538,22 @@
 <h2 id="1">1.运行<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>你可以使用 <code>mpirun</code> 命令运行并行的 MISA-AKMC 分子动力学软件。例如，在下面的示例中，使用4个 MPI 进程运行 MISA-AKMC, 并指定配置文件路径为 <code>$AKMC_PATH/example/config.yaml</code> 文件。</p>
 <p>?&gt; 关于配置文件的相关说明可参考<a href="https://hpcer.pages.hpcer.dev/misa-akmc/users-manual/reference/reference/"><strong>配置项说明</strong></a>等相关章节。</p>
-<pre><code class="language-bash">cd $AKMC_PATH/example
-mpirun -n 4 ../build/bin/pmisa-kmc -c config.yaml
-</code></pre>
-<p>更多信息可以通过执行<code>$AKMC_PATH/build/bin/pmisa-kmc --help</code>命令查看。</p>
-<pre><code class="language-bash">$ cd $AKMC_PATH
+<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>/example
+mpirun -n <span class="m">4</span> ../build/bin/pmisa-kmc -c config.yaml
+</code></pre></div>
+更多信息可以通过执行<code>$AKMC_PATH/build/bin/pmisa-kmc --help</code>命令查看。</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
 $ build/bin/pmisa-kmc --help
-  build/bin/pmisa-kmc {OPTIONS}
+  build/bin/pmisa-kmc <span class="o">{</span>OPTIONS<span class="o">}</span>
 
     This is parallel misa-kmc program.
 
   OPTIONS:
 
-      -h, --help                        Display this help menu
-      -c[conf], --conf=[conf]           The configure file
+      -h, --help                        Display this <span class="nb">help</span> menu
+      -c<span class="o">[</span>conf<span class="o">]</span>, --conf<span class="o">=[</span>conf<span class="o">]</span>           The configure file
       -v, --version                     show version number
-</code></pre>
+</code></pre></div>
 <h2 id="2">2.运行结果<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>运行完成后， example 目录中会生成名为 kmc.*.out 的二进制文件( kmc.*.out 为默认的输出文件名称，可在配置文件中更改)。该文件中包含各个指定时间步 dump 的所有原子信息，如原子类型、位置坐标等。</p>
                 

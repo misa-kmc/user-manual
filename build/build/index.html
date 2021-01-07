@@ -536,18 +536,18 @@
                 
                 <p>MISA-AKMC 使用 CMake 工具进行编译构建，关于如何使用 CMake 工具可以参考<a href="https://cmake.org/cmake/help/v3.0/index.html">相关文档</a>。在开始进行构建之前，请确保你已完成编译环境的配置。</p>
 <h2 id="1-cmake">1. 使用 CMake 工具编译<a class="headerlink" href="#1-cmake" title="Permanent link">&para;</a></h2>
-<pre><code class="language-bash">cd $AKMC_PATH
-cmake -B ./build -H./ -DCMAKE_BUILD_TYPE=Release
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
+cmake -B ./build -H./ -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
 cmake --build ./build
-</code></pre>
+</code></pre></div>
 <p>执行上述步骤后，编译完成的可执行文件 misa-kmc 以及 pmisa-kmc 以及相关的测试程序均置于 <code>$AKMC_PATH/build/bin</code> 目录</p>
 <h2 id="2">2. 构建选项<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>如果你需要将编译完成的二进制文件安装至指定目录，可使用以下命令进行构建并安装：</p>
-<pre><code class="language-bash">cd $AKMC_PATH
-cmake -B./build -H./ -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/your/desirable/path/ 
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
+cmake -B./build -H./ -DCMAKE_BUILD_TYPE<span class="o">=</span>Release -DCMAKE_INSTALL_PREFIX<span class="o">=</span>/your/desirable/path/ 
 cmake --build ./build
-cmake --build ./build --target install # install
-</code></pre>
+cmake --build ./build --target install <span class="c1"># install</span>
+</code></pre></div>
 <p>在执行 cmake 命令的时候，可以指定 CMake 构建工具内置的参数，详细的参数列表可以参考<a href="https://cmake.org/cmake/help/v3.0/manual/cmake-variables.7.html">相关文档</a>，还可以使用以下参数：</p>
 <table>
 <thead>
@@ -629,10 +629,10 @@ cmake --build ./build --target install # install
 </tbody>
 </table>
 <p>例如，如果你不希望构建单元测试，可以使用如下命令进行构建：</p>
-<pre><code class="language-bash">cd $AKMC_PATH
-cmake -B ./build -H./ -DKMC_TEST_BUILD_ENABLE_FLAG=OFF
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
+cmake -B ./build -H./ -DKMC_TEST_BUILD_ENABLE_FLAG<span class="o">=</span>OFF
 cmake --build ./build
-</code></pre>
+</code></pre></div>
                 
                   
                 

@@ -634,26 +634,26 @@
 如果你已经拥有源代码，可以忽略此步骤，直接跳到<a href="#2-安装依赖">安装依赖</a>小节。</p>
 <h3 id="11-git-clone">1.1 git clone<a class="headerlink" href="#11-git-clone" title="Permanent link">&para;</a></h3>
 <p>如果你的系统中安装了 git 工具，可以使用 git clone 来拷贝仓库到本地。
-这样的好处是，你可以随时切换使用其他任意版本的代码。</p>
-<pre><code class="language-bash">git clone https://git.hpcer.dev/HPCer/misa-akmc/kmc.git # https
-</code></pre>
-<p>或者，如果你配置了ssh key, 也可以使用 ssh 协议进行 clone:</p>
-<pre><code class="language-bash">git clone ssh://git@git.hpcer.dev:2222/HPCer/misa-akmc/kmc.git # ssh
-</code></pre>
+这样的好处是，你可以随时切换使用其他任意版本的代码。
+<div class="highlight"><pre><span></span><code>git clone https://git.hpcer.dev/HPCer/misa-akmc/kmc.git <span class="c1"># https</span>
+</code></pre></div></p>
+<p>或者，如果你配置了ssh key, 也可以使用 ssh 协议进行 clone:
+<div class="highlight"><pre><span></span><code>git clone ssh://git@git.hpcer.dev:2222/HPCer/misa-akmc/kmc.git <span class="c1"># ssh</span>
+</code></pre></div></p>
 <p>上述 git clone 命令会创建一个名为 kmc 的目录。
-克隆完成后，你可以选择通过调用以下命令来构建特定分支（如版本分支）</p>
-<pre><code class="language-bash">$ cd $AKMC_PATH # MISA-AKMC 源码目录
+克隆完成后，你可以选择通过调用以下命令来构建特定分支（如版本分支）
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> <span class="nv">$AKMC_PATH</span> <span class="c1"># MISA-AKMC 源码目录</span>
 $ git checkout Branch_Or_Tag
-# where ' Branch_Or_Tag' is the desired branch or tag.
-</code></pre>
-<p>例如，要使用 v0.1.0 版本而不是主分支，可使用以下命令进行切换 <code>git checkout v0.1.0</code>.</p>
+<span class="c1"># where &#39; Branch_Or_Tag&#39; is the desired branch or tag.</span>
+</code></pre></div>
+例如，要使用 v0.1.0 版本而不是主分支，可使用以下命令进行切换 <code>git checkout v0.1.0</code>.</p>
 <h3 id="12">1.2 直接下载源码包<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
 <p>使用wget命令或者在浏览器中下载源代码压缩包。<br />
-如，下载v0.1.0版本的源码包：</p>
-<pre><code class="language-bash">$ wget -O kmc-v0.1.0.tar.gz \
+如，下载v0.1.0版本的源码包：
+<div class="highlight"><pre><span></span><code>$ wget -O kmc-v0.1.0.tar.gz <span class="se">\</span>
   https://git.hpcer.dev/HPCer/misa-akmc/kmc/-/archive/v0.1.0/kmc-v0.1.0.tar.gz
 $ tar -zxvf kmc-v0.1.0.tar.gz
-</code></pre>
+</code></pre></div></p>
 <h2 id="2">2. 安装依赖<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p>获取的源码中不包含该程序的依赖包，所以还需要额外的工作来安装依赖。</p>
 <p>MISA-AKMC 依赖于一些开源库, 如<a href="https://git.hpcer.dev/genshen/kiwi">kiwi</a>,
@@ -665,25 +665,25 @@ googletest, <a href="https://github.com/misa-kmc/xoshiro">xoshiro</a>, <a href="
 <p>使用该方式安装依赖，需要你的系统能够连接到互联网，且有所有依赖仓库的 git 克隆权限。
 可以通过设置 <code>PKG_AUTH</code> 环境变量的方式指定获取相关私有仓库的口令，
 如 <code>PKG_AUTH=username?token@git.hpcer.dev</code> 指定了获取位于 git.hpcer.dev 上的私有依赖库的用户名和认证 token。</p>
-<p>依赖安装：</p>
-<pre><code class="language-bash">cd $AKMC_PATH
-PKG_AUTH=username?token@git.hpcer.dev pkg fetch
+<p>依赖安装：
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
+<span class="nv">PKG_AUTH</span><span class="o">=</span>username?token@git.hpcer.dev pkg fetch
 pkg install
-</code></pre>
+</code></pre></div></p>
 <h3 id="22-pkg">2.2 使用 pkg 导入依赖包<a class="headerlink" href="#22-pkg" title="Permanent link">&para;</a></h3>
-<p>假设依赖压缩包文件名为: vendor-20190725-003851.426644.tar, 可以通过以下 pkg 命令导入依赖包:</p>
-<pre><code class="language-bash">cd $AKMC_PATH
+<p>假设依赖压缩包文件名为: vendor-20190725-003851.426644.tar, 可以通过以下 pkg 命令导入依赖包:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
 pkg import --input vendor-20190725-003851.426644.tar
 pkg fetch
 pkg install
-</code></pre>
+</code></pre></div></p>
 <h3 id="23">2.3 直接解压依赖包<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
 <p>直接导入依赖是将已有的依赖压缩包解压解压 MISA-AKMC 的源码的 <code>vendor</code> 目录。</p>
-<p>假设依赖压缩包文件名为：vendor-20190725-003851.426644.tar, 可以通过以下命令加入依赖包:</p>
-<pre><code class="language-bash">mkdir -p $AKMC_PATHAKMC_PATH/vendor
-cd $AKMC_PATH/vendor
-tar xvf path/of/vendor-20200725-003851.426644.tar # tar to direcooty.
-</code></pre>
+<p>假设依赖压缩包文件名为：vendor-20190725-003851.426644.tar, 可以通过以下命令加入依赖包:
+<div class="highlight"><pre><span></span><code>mkdir -p <span class="nv">$AKMC_PATHAKMC_PATH</span>/vendor
+<span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>/vendor
+tar xvf path/of/vendor-20200725-003851.426644.tar <span class="c1"># tar to direcooty.</span>
+</code></pre></div></p>
                 
                   
                 
