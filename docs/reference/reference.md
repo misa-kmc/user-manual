@@ -9,7 +9,7 @@ MISA-AKMC 使用 [yaml](https://yaml.org) 格式作为配置文件的格式
 ## 1.示例
 
 以下展示了 MISA-AKMC 配置文件的部分示例：
-```yaml
+```yaml linenums="1"
 # This is the config file of parallel kMC program.
 # file format: yaml, see https://yaml.org for mor e details.
 # config template file writen by <a href='mailto:genshenchu@gmail.com'>genshen</a>"
