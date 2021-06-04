@@ -14,12 +14,12 @@ sidebar_label: "获取源码"
 如果你的系统中安装了 git 工具，可以使用 git clone 来拷贝仓库到本地。
 这样的好处是，你可以随时切换使用其他任意版本的代码。
 ```bash
-git clone https://git.hpcer.dev/HPCer/misa-akmc/kmc.git # https
+git clone https://github.com/misa-kmc/misa-akmc.git # https
 ```
 
 或者，如果你配置了ssh key, 也可以使用 ssh 协议进行 clone:
 ```bash
-git clone ssh://git@git.hpcer.dev:2222/HPCer/misa-akmc/kmc.git # ssh
+git clone git@github.com:misa-kmc/misa-akmc.git # ssh
 ```
 
 上述 git clone 命令会创建一个名为 kmc 的目录。
@@ -31,14 +31,14 @@ $ git checkout Branch_Or_Tag
 ```
 例如，要使用 v0.1.0 版本而不是主分支，可使用以下命令进行切换 `git checkout v0.1.0`.
 
-### 1.2 直接下载源码包
-使用wget命令或者在浏览器中下载源代码压缩包。  
-如，下载v0.1.0版本的源码包：
-```bash
-$ wget -O kmc-v0.1.0.tar.gz \
-  https://git.hpcer.dev/HPCer/misa-akmc/kmc/-/archive/v0.1.0/kmc-v0.1.0.tar.gz
-$ tar -zxvf kmc-v0.1.0.tar.gz
-```
+!!! tip
+    开发组的人员可以通过以下地址进行 git clone 操作：
+    `git clone https://git.hpcer.dev/HPCer/misa-akmc/kmc.git` 或者 `git clone ssh://git@git.hpcer.dev:2222/HPCer/misa-akmc/kmc.git`
+
+## 1.2 下载源码包
+目前，MISA-AKMC 代码仓库托管于 github 上，
+可以前往 [github 代码仓库](https://github.com/misa-kmc/misa-akmc) 进行源代码的下载。
+更多关于开发进展、issue 等相关信息，也可在此查看。
 
 ## 2. 安装依赖
 
@@ -72,6 +72,10 @@ pkg import --input vendor-20190725-003851.426644.tar
 pkg fetch
 pkg install
 ```
+
+!!! note
+    针对 MISA-AKMC 目前 master 分支的代码(commit id: fad9250)，可以前往 [OSDN](https://osdn.net/dl/misa-kmc/vendor-20210604-093343.00243.tar) 
+    下载依赖压缩包文件。
 
 ### 2.3 直接解压依赖包
 
