@@ -1,7 +1,7 @@
 ---
-id: reference
-title: "配置项说明"
-sidebar_label: "配置项说明"
+id: config-file
+title: "配置文件"
+sidebar_label: "配置文件"
 ---
 
 MISA-AKMC 使用 [yaml](https://yaml.org) 格式作为配置文件的格式

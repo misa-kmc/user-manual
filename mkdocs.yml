@@ -36,4 +36,5 @@ nav:
   - 运行:
     - 运行: run/run.md
   - Reference:
-    - 配置项说明: reference/reference.md
+    - 配置文件: reference/config-file.md
+    - 配置项说明: reference/config-ref.md
