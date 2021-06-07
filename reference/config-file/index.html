@@ -14,7 +14,7 @@
     
     
       
-        <title>编译构建 - MISA-AKMC Users Manual</title>
+        <title>配置文件 - MISA-AKMC Users Manual</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-cmake" class="md-skip">
+        <a href="#1" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              编译构建
+              配置文件
             
           </span>
         </div>
@@ -178,9 +178,7 @@
     <li class="md-tabs__item">
       
       
-        
-      
-      <a href="../prepare-environment/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../build/prepare-environment/" class="md-tabs__link">
         编译构建
       </a>
     </li>
@@ -206,7 +204,9 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../reference/config-file/" class="md-tabs__link">
+        
+      
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Reference
       </a>
     </li>
@@ -306,12 +306,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       编译构建
       <span class="md-nav__icon md-icon"></span>
@@ -330,7 +328,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../prepare-environment/" class="md-nav__link">
+    <a href="../../build/prepare-environment/" class="md-nav__link">
       准备环境
     </a>
   </li>
@@ -342,7 +340,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../get-source-code/" class="md-nav__link">
+    <a href="../../build/get-source-code/" class="md-nav__link">
       获取源码
     </a>
   </li>
@@ -352,52 +350,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        编译
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../build/build/" class="md-nav__link">
       编译
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-cmake" class="md-nav__link">
-    1. 使用 CMake 工具编译
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 构建选项
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -447,10 +404,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     <label class="md-nav__link" for="nav-4">
       Reference
       <span class="md-nav__icon md-icon"></span>
@@ -467,11 +426,52 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../reference/config-file/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        配置文件
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       配置文件
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.示例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.使用配置文件
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -481,7 +481,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../reference/config-ref/" class="md-nav__link">
+    <a href="../config-ref/" class="md-nav__link">
       配置项说明
     </a>
   </li>
@@ -514,15 +514,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-cmake" class="md-nav__link">
-    1. 使用 CMake 工具编译
+  <a href="#1" class="md-nav__link">
+    1.示例
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    2. 构建选项
+    2.使用配置文件
   </a>
   
 </li>
@@ -539,112 +539,144 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://git.hpcer.dev/HPCer/misa-akmc/users-manual/-/edit/master/docs/build/build.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://git.hpcer.dev/HPCer/misa-akmc/users-manual/-/edit/master/docs/reference/config-file.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>编译</h1>
+                  <h1>配置文件</h1>
                 
-                <p>MISA-AKMC 使用 CMake 工具进行编译构建，关于如何使用 CMake 工具可以参考<a href="https://cmake.org/cmake/help/v3.0/index.html">相关文档</a>。在开始进行构建之前，请确保你已完成编译环境的配置。</p>
-<h2 id="1-cmake">1. 使用 CMake 工具编译<a class="headerlink" href="#1-cmake" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
-cmake -B ./build -H./ -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
-cmake --build ./build
+                <p>MISA-AKMC 使用 <a href="https://yaml.org">yaml</a> 格式作为配置文件的格式</p>
+<h2 id="1">1.示例<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>以下展示了 MISA-AKMC 配置文件的部分示例：
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># This is the config file of parallel kMC program.</span>
+<span class="c1"># file format: yaml, see https://yaml.org for mor e details.</span>
+<span class="c1"># config template file writen by &lt;a href=&#39;mailto:genshenchu@gmail.com&#39;&gt;genshen&lt;/a&gt;&quot;</span>
+
+<span class="nt">title</span><span class="p">:</span> <span class="s">&quot;parallel</span><span class="nv"> </span><span class="s">kMC</span><span class="nv"> </span><span class="s">configure</span><span class="nv"> </span><span class="s">file&quot;</span>
+<span class="nt">version</span><span class="p">:</span> <span class="s">&quot;0.1.0&quot;</span>
+
+<span class="nt">box</span><span class="p">:</span>
+  <span class="nt">size</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">80</span><span class="p p-Indicator">,</span> <span class="nv">80</span><span class="p p-Indicator">,</span> <span class="nv">80</span><span class="p p-Indicator">]</span>
+  <span class="nt">lattice_const</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2.85532</span>   <span class="c1"># lattice constance</span>
+  <span class="nt">cutoff_radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5.6</span>
+
+<span class="nt">create</span><span class="p">:</span> <span class="c1"># how the simulation box is created.</span>
+  <span class="nt">random</span><span class="p">:</span>
+    <span class="nt">enable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">va_count</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>   <span class="c1"># vacancy number, not percent.</span>
+    <span class="nt">alloy</span><span class="p">:</span>
+      <span class="nt">Fe</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">9598</span>
+      <span class="nt">Cu</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">134</span>
+      <span class="nt">Mn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">134</span>
+      <span class="nt">Ni</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">134</span>
+      <span class="nt">FeFe</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span> <span class="c1"># pair number of [110] dumbbell.</span>
+      <span class="nt">FeCu</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">FeMn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">FeNi</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">CuCu</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">CuNi</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">CuMn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">NiNi</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">NiMn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+      <span class="nt">MnMn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+  <span class="nt">pipe</span><span class="p">:</span> <span class="c1"># if create_box is set to false or not set, then pipe will be used.</span>
+    <span class="nt">enable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">input_box</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">last_frame.xyz</span> <span class="c1"># pipe from MD.</span>
+  <span class="nt">restart</span><span class="p">:</span>
+    <span class="nt">enable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+    <span class="nt">file_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1072.xyz</span>
+
+<span class="nt">seeds</span><span class="p">:</span>
+  <span class="nt">seeds_file</span><span class="p">:</span> <span class="s">&quot;&quot;</span> <span class="c1"># used for setting different seed for each MPI rank (todo)</span>
+  <span class="nt">create_types</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100565</span> <span class="c1"># if 0 is set, random device will be used.</span>
+  <span class="nt">create_vacancy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16650</span>
+  <span class="nt">event_selection</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">563264</span>
+  <span class="nt">time_inc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">594689</span>
+
+<span class="nt">simulation</span><span class="p">:</span>
+  <span class="nt">temperature</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">673</span>  <span class="c1"># unit: K</span>
+  <span class="nt">physics_time</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8e4</span>  <span class="c1"># physics time limit.</span>
+  <span class="nt">steps_limit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span> <span class="c1"># limit of kMC steps.</span>
+  <span class="nt">attempt_freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6e12</span> <span class="c1">#  unit:  1/s</span>
+  <span class="nt">isgenr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="nt">dpasm1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3e-9</span> <span class="c1"># dpa per second, unit: dpa/s</span>
+
+<span class="nt">output</span><span class="p">:</span>
+  <span class="nt">dump</span><span class="p">:</span>
+    <span class="nt">interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span> <span class="c1"># dump system lattice information.</span>
+    <span class="nt">file_path</span><span class="p">:</span> <span class="s">&quot;kmc.{}.out&quot;</span>
+  <span class="nt">logs</span><span class="p">:</span>
+    <span class="nt">interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span> <span class="c1"># if zero is set, it means no log.</span>
+    <span class="nt">logs_file</span><span class="p">:</span> <span class="s">&quot;&quot;</span> <span class="c1"># if it is empty, log to /dev/console</span>
 </code></pre></div>
-<p>执行上述步骤后，编译完成的可执行文件 misa-kmc 以及 pmisa-kmc 以及相关的测试程序均置于 <code>$AKMC_PATH/build/bin</code> 目录</p>
-<h2 id="2">2. 构建选项<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>如果你需要将编译完成的二进制文件安装至指定目录，可使用以下命令进行构建并安装：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
-cmake -B./build -H./ -DCMAKE_BUILD_TYPE<span class="o">=</span>Release -DCMAKE_INSTALL_PREFIX<span class="o">=</span>/your/desirable/path/ 
-cmake --build ./build
-cmake --build ./build --target install <span class="c1"># install</span>
+</td></tr></table></p>
+<h2 id="2">2.使用配置文件<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>你可以在运行 MISA-AKMC 程序时，通过命令行参数配置文件路径，程序可以读取配置文件，以进行后续模拟，例如：</p>
+<p><div class="highlight"><pre><span></span><code>mpirun -n <span class="m">4</span> /path/of/pmisa-akmc -c /path/of/config.yaml
 </code></pre></div>
-<p>在执行 cmake 命令的时候，可以指定 CMake 构建工具内置的参数，详细的参数列表可以参考<a href="https://cmake.org/cmake/help/v3.0/manual/cmake-variables.7.html">相关文档</a>，还可以使用以下参数：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>取值</th>
-<th>默认值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>KMC_OpenMP_ENABLE_FLAG</td>
-<td>ON/OFF</td>
-<td>OFF</td>
-<td>是否使用 OpenMP 构建</td>
-</tr>
-<tr>
-<td>KMC_MPI_ENABLE_FLAG</td>
-<td>ON/OFF</td>
-<td>ON</td>
-<td>是否使用 MPI 构建</td>
-</tr>
-<tr>
-<td>KMC_TEST_BUILD_ENABLE_FLAG</td>
-<td>ON/OFF</td>
-<td>ON</td>
-<td>是否构建 test (单元测试)</td>
-</tr>
-<tr>
-<td>KMC_TEST_MPI_ENABLE_FLAG</td>
-<td>ON/OFF</td>
-<td>ON</td>
-<td>是否在测试中启用 MPI</td>
-</tr>
-<tr>
-<td>EAM_POT_ENABLE_FLAG</td>
-<td>ON/OFF</td>
-<td>OFF</td>
-<td>是否启用使用电子势能来计算系统能量</td>
-</tr>
-<tr>
-<td>KMC_RAND</td>
-<td>LCG/MT/STC/xoshiro/REAL</td>
-<td>MT</td>
-<td>随机数生成器</td>
-</tr>
-</tbody>
-</table>
-<p>注：其中 KMC_RAND 中的取值代表着如下方法</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LCG</td>
-<td>linear congruential</td>
-</tr>
-<tr>
-<td>MT</td>
-<td>mersenne twister</td>
-</tr>
-<tr>
-<td>STC</td>
-<td>subtract with carry</td>
-</tr>
-<tr>
-<td>xoshiro</td>
-<td>http://xoshiro.di.unimi.it</td>
-</tr>
-<tr>
-<td>REAL</td>
-<td>real random number privided by linux OS</td>
-</tr>
-</tbody>
-</table>
-<p>例如，如果你不希望构建单元测试，可以使用如下命令进行构建：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
-cmake -B ./build -H./ -DKMC_TEST_BUILD_ENABLE_FLAG<span class="o">=</span>OFF
-cmake --build ./build
-</code></pre></div>
+或者：
+<div class="highlight"><pre><span></span><code>mpirun -n <span class="m">4</span> /path/of/pmisa-akmc --conf<span class="o">=</span>/path/of/config.yaml
+</code></pre></div></p>
                 
                   
                 
@@ -665,7 +697,7 @@ cmake --build ./build
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../get-source-code/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../run/run/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -674,19 +706,19 @@ cmake --build ./build
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                获取源码
+                运行
               </div>
             </div>
           </a>
         
         
-          <a href="../../run/run/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../config-ref/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                运行
+                配置项说明
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

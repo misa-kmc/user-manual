@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -206,7 +206,7 @@
       
         
       
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../config-file/" class="md-tabs__link md-tabs__link--active">
         Reference
       </a>
     </li>
@@ -426,6 +426,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../config-file/" class="md-nav__link">
+      配置文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -455,16 +467,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1.示例
+  <a href="#_1" class="md-nav__link">
+    配置项说明
+  </a>
+  
+    <nav class="md-nav" aria-label="配置项说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本配置
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2.使用配置文件
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    模拟体系创建
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    随机数种子与模拟条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    输出及日志
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -502,16 +541,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1.示例
+  <a href="#_1" class="md-nav__link">
+    配置项说明
+  </a>
+  
+    <nav class="md-nav" aria-label="配置项说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本配置
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2.使用配置文件
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    模拟体系创建
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    随机数种子与模拟条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    输出及日志
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -527,144 +593,234 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://git.hpcer.dev/HPCer/misa-akmc/users-manual/-/edit/master/docs/reference/reference.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://git.hpcer.dev/HPCer/misa-akmc/users-manual/-/edit/master/docs/reference/config-ref.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
                   <h1>配置项说明</h1>
                 
-                <p>MISA-AKMC 使用 <a href="https://yaml.org">yaml</a> 格式作为配置文件的格式</p>
-<h2 id="1">1.示例<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>以下展示了 MISA-AKMC 配置文件的部分示例：
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># This is the config file of parallel kMC program.</span>
-<span class="c1"># file format: yaml, see https://yaml.org for mor e details.</span>
-<span class="c1"># config template file writen by &lt;a href=&#39;mailto:genshenchu@gmail.com&#39;&gt;genshen&lt;/a&gt;&quot;</span>
-
-<span class="nt">title</span><span class="p">:</span> <span class="s">&quot;parallel</span><span class="nv"> </span><span class="s">kMC</span><span class="nv"> </span><span class="s">configure</span><span class="nv"> </span><span class="s">file&quot;</span>
-<span class="nt">version</span><span class="p">:</span> <span class="s">&quot;0.1.0&quot;</span>
-
-<span class="nt">box</span><span class="p">:</span>
-  <span class="nt">size</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">80</span><span class="p p-Indicator">,</span> <span class="nv">80</span><span class="p p-Indicator">,</span> <span class="nv">80</span><span class="p p-Indicator">]</span>
-  <span class="nt">lattice_const</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2.85532</span>   <span class="c1"># lattice constance</span>
-  <span class="nt">cutoff_radius</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5.6</span>
-
-<span class="nt">create</span><span class="p">:</span> <span class="c1"># how the simulation box is created.</span>
-  <span class="nt">random</span><span class="p">:</span>
-    <span class="nt">enable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">va_count</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>   <span class="c1"># vacancy number, not percent.</span>
-    <span class="nt">alloy</span><span class="p">:</span>
-      <span class="nt">Fe</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">9598</span>
-      <span class="nt">Cu</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">134</span>
-      <span class="nt">Mn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">134</span>
-      <span class="nt">Ni</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">134</span>
-      <span class="nt">FeFe</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span> <span class="c1"># pair number of [110] dumbbell.</span>
-      <span class="nt">FeCu</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-      <span class="nt">FeMn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-      <span class="nt">FeNi</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-      <span class="nt">CuCu</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-      <span class="nt">CuNi</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-      <span class="nt">CuMn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-      <span class="nt">NiNi</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-      <span class="nt">NiMn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-      <span class="nt">MnMn</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-  <span class="nt">pipe</span><span class="p">:</span> <span class="c1"># if create_box is set to false or not set, then pipe will be used.</span>
-    <span class="nt">enable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">input_box</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">last_frame.xyz</span> <span class="c1"># pipe from MD.</span>
-  <span class="nt">restart</span><span class="p">:</span>
-    <span class="nt">enable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">file_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1072.xyz</span>
-
-<span class="nt">seeds</span><span class="p">:</span>
-  <span class="nt">seeds_file</span><span class="p">:</span> <span class="s">&quot;&quot;</span> <span class="c1"># used for setting different seed for each MPI rank (todo)</span>
-  <span class="nt">create_types</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100565</span> <span class="c1"># if 0 is set, random device will be used.</span>
-  <span class="nt">create_vacancy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16650</span>
-  <span class="nt">event_selection</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">563264</span>
-  <span class="nt">time_inc</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">594689</span>
-
-<span class="nt">simulation</span><span class="p">:</span>
-  <span class="nt">temperature</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">673</span>  <span class="c1"># unit: K</span>
-  <span class="nt">physics_time</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8e4</span>  <span class="c1"># physics time limit.</span>
-  <span class="nt">steps_limit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1000</span> <span class="c1"># limit of kMC steps.</span>
-  <span class="nt">attempt_freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6e12</span> <span class="c1">#  unit:  1/s</span>
-  <span class="nt">isgenr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-  <span class="nt">dpasm1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3e-9</span> <span class="c1"># dpa per second, unit: dpa/s</span>
-
-<span class="nt">output</span><span class="p">:</span>
-  <span class="nt">dump</span><span class="p">:</span>
-    <span class="nt">interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span> <span class="c1"># dump system lattice information.</span>
-    <span class="nt">file_path</span><span class="p">:</span> <span class="s">&quot;kmc.{}.out&quot;</span>
-  <span class="nt">logs</span><span class="p">:</span>
-    <span class="nt">interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span> <span class="c1"># if zero is set, it means no log.</span>
-    <span class="nt">logs_file</span><span class="p">:</span> <span class="s">&quot;&quot;</span> <span class="c1"># if it is empty, log to /dev/console</span>
-</code></pre></div>
-</td></tr></table></p>
-<h2 id="2">2.使用配置文件<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>你可以在运行 MISA-AKMC 程序时，通过命令行参数配置文件路径，程序可以读取配置文件，以进行后续模拟，例如：</p>
-<p><div class="highlight"><pre><span></span><code>mpirun -n <span class="m">4</span> /path/of/pmisa-akmc -c /path/of/config.yaml
-</code></pre></div>
-或者：
-<div class="highlight"><pre><span></span><code>mpirun -n <span class="m">4</span> /path/of/pmisa-akmc --conf<span class="o">=</span>/path/of/config.yaml
-</code></pre></div></p>
+                <h2 id="_1">配置项说明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>配置文件的示例见 <code>$SLKMC_PATH/example/config.yaml</code>, 其中配置文件的各个字段如下，你也可以根据你的需求修改各选项的值。</p>
+<h3 id="_2">基本配置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>基本配置指定模拟的基本信息，如空间信息(晶格点数、截断半径等)，体系创建等配置。</p>
+<ul>
+<li>
+<p><code>box</code><br />
+说明：指定模拟的基本信息，如box大小、截断半径等;  </p>
+</li>
+<li>
+<p><code>box.size</code><br />
+类型: Unsigned Long 数组, 长度: 3;<br />
+说明：模拟盒子大小，分别为x、y、z三个维度上的尺寸；单位为晶格常数;</p>
+</li>
+<li>
+<p><code>box.lattice_const</code><br />
+类型: Double;<br />
+单位: 埃, Å;<br />
+说明: 晶格常数;  </p>
+</li>
+<li>
+<p><code>box.cutoff_radius</code><br />
+类型: Double;<br />
+说明: 截断半径系数;   截断半径系数乘以晶格常数等于实际的截断半径长度;  </p>
+</li>
+</ul>
+<h3 id="_3">模拟体系创建<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>create</code><br />
+说明：指定模拟初始化时创建模拟体系的相关参数;  </p>
+</li>
+<li>
+<p><code>create.random</code><br />
+说明：随机创建模拟体系的相关参数</p>
+</li>
+<li>
+<p><code>create.random.enable</code><br />
+类型：Boolean;<br />
+说明：true表示程序初始化时，按照给定参数随机创建原子；false表示读入已有的原子信息以创建原子;  </p>
+</li>
+<li>
+<p><code>create.random.va_count</code><br />
+类型：Unsigned Long;<br />
+说明：模拟体系中空位的数目</p>
+</li>
+<li>
+<p><code>create.random.alloy</code><br />
+说明：合金元素的相关配置; 该部分仅create.random.enable 为 true 时有效;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.Fe</code>
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中Fe原子的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.Cu</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中Cu原子的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.Mn</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中Mn原子的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.FeFe</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中FeFe[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.FeCu</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中FeCu[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.FeMn</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中FeMn[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.FeNi</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中FeNi[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.CuCu</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中CuCu[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.CuNi</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中CuNi[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.CuMn</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中CuMn[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.NiNi</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中NiNi[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.NiMn</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中NiMn[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.random.alloy.MnMn</code><br />
+类型：Unsigned Int;<br />
+说明：创建合金时，合金中MnMn[110]间隙对的数目;  </p>
+</li>
+<li>
+<p><code>create.pipe</code><br />
+说明：读入已有的原子信息的相关参数；</p>
+</li>
+<li>
+<p><code>create.pipe.enable</code><br />
+类型：Boolean;<br />
+说明：当且仅当 create.random.enable 为 false 时启用，true 表示使用读入已有的原子信息创建原子；</p>
+</li>
+<li>
+<p><code>create.pipe.input_box</code><br />
+类型：String;<br />
+说明：如果 create.random.enable 为 false 且 create.pipe.enable 为 true, 该项指定读取文件路径;  </p>
+</li>
+</ul>
+<h3 id="_4">随机数种子与模拟条件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>seeds</code><br />
+说明：指定随机数种子信息;  </p>
+</li>
+<li>
+<p><code>seeds.seeds_file</code><br />
+类型：String;<br />
+说明：通过读入随机数种子文件，对每个 MPI rank 设置不同的随机数;  </p>
+</li>
+<li>
+<p><code>seeds.create_vancancy</code><br />
+类型：Unsigned Int32;<br />
+说明：创建空位信息的随机数种子;  </p>
+</li>
+<li>
+<p><code>seeds.event_selection</code><br />
+类型：Unsigned Int32;<br />
+说明：选择反应事件的随机数种子;  </p>
+</li>
+<li>
+<p><code>seeds.time_inc</code><br />
+类型：Unsigned Int32;<br />
+说明：确定反应事件事件增量的随机数种子;  </p>
+</li>
+<li>
+<p><code>simulation</code><br />
+说明：指定模拟的条件;  </p>
+</li>
+<li>
+<p><code>simulation.temperature</code><br />
+类型：Double;<br />
+说明：体系的温度，单位为 K;  </p>
+</li>
+<li>
+<p><code>simulation.physics_time</code><br />
+类型：Double;<br />
+说明：模拟的物理时间;  </p>
+</li>
+<li>
+<p><code>simulation.steps_limit</code><br />
+类型：Unsigned Long;<br />
+说明：模拟的最大时间步;  </p>
+</li>
+<li>
+<p><code>simulation.attempt_freq</code><br />
+类型：Double;<br />
+说明：体系的尝试频率;  </p>
+</li>
+<li>
+<p><code>simulation.dpasm1</code><br />
+类型：Double;<br />
+说明：每秒 dpa, 单位 dpa/s</p>
+</li>
+</ul>
+<h3 id="_5">输出及日志<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>output</code><br />
+说明：输出相关配置;  </p>
+</li>
+<li>
+<p><code>output.dump</code><br />
+说明：预设的体系 dump 配置，包括 dump 文件名、输出模拟等配置;  </p>
+</li>
+<li>
+<p><code>output.dump.interval</code><br />
+类型：Unsigned Long;<br />
+说明：指定每隔一定时间步 dump 体系的点阵信息;  </p>
+</li>
+<li>
+<p><code>output.dump.file_path</code><br />
+类型：String;<br />
+说明：指定 dump 文件的路径;  </p>
+</li>
+<li>
+<p><code>output.logs</code><br />
+说明：程序日志, 可以选择输出到标准输出或者文件;  </p>
+</li>
+<li>
+<p><code>output.logs.interval</code><br />
+类型：Unsigned Long;<br />
+说明：指定每隔一定时间步输出系统的热力学信息，包括体系温度、能量等;  </p>
+</li>
+<li>
+<p><code>output.logs.logs_file</code><br />
+类型：String;<br />
+说明：如果日志输出模式为file, 该选项指定文件路径，如果此项为空日志输出至 /dev/console;  </p>
+</li>
+</ul>
                 
                   
                 
@@ -685,7 +841,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../run/run/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../config-file/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -694,7 +850,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                运行
+                配置文件
               </div>
             </div>
           </a>
