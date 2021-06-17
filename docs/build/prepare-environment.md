@@ -6,7 +6,7 @@ sidebar_label: "准备环境"
 
 在 Linux 上构建 MISA-AKMC 之前，请确保你的系统中已安装以下构建工具：
 
-- [CMake](http://cmake.org), 3.0 及以上版本;
+- [CMake](http://cmake.org), 3.15 及以上版本;
 - 支持 C++11 特性的 C++ 编译器;
 - MPI 环境;
 - [pkg](https://github.com/genshen/pkg) C/C++ 依赖管理工具;
