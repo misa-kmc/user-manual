@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install poetry
+        pip install poetry==1.1.6
         poetry install -vv
         poetry run mkdocs build
 
