@@ -9,19 +9,19 @@
       
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-6.2.8">
     
     
       
-        <title>运行 MISA-AKMC - MISA-AKMC Users Manual</title>
+        <title>准备环境 - MISA-AKMC Users Manual</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6910b76c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
@@ -33,7 +33,7 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
@@ -57,13 +57,14 @@
         <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
       
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#cmake" class="md-skip">
           Skip to content
         </a>
       
@@ -74,9 +75,11 @@
     
       
 
+  
+
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="MISA-AKMC Users Manual" class="md-header-nav__button md-logo" aria-label="MISA-AKMC Users Manual">
+    <a href="../index.html" title="MISA-AKMC Users Manual" class="md-header-nav__button md-logo" aria-label="MISA-AKMC Users Manual">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -86,18 +89,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             MISA-AKMC Users Manual
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
-              运行 MISA-AKMC
+              准备环境
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -152,20 +157,20 @@
       
         
           
-
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   
   
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-      
-      <a href="../.." class="md-tabs__link">
+      <a href="../index.html" class="md-tabs__link">
         首页
       </a>
     </li>
@@ -175,10 +180,15 @@
         
   
   
+    
+  
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-      
-      <a href="../../build/prepare-environment/" class="md-tabs__link">
+      <a href="prepare-environment.html" class="md-tabs__link md-tabs__link--active">
         编译构建
       </a>
     </li>
@@ -188,12 +198,13 @@
         
   
   
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-      
-        
-      
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../run/run.html" class="md-tabs__link">
         运行
       </a>
     </li>
@@ -203,10 +214,13 @@
         
   
   
+
+
+  
+  
+  
     <li class="md-tabs__item">
-      
-      
-      <a href="../../reference/config-file/" class="md-tabs__link">
+      <a href="../reference/config-file.html" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -222,14 +236,22 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MISA-AKMC Users Manual" class="md-nav__button md-logo" aria-label="MISA-AKMC Users Manual">
+    <a href="../index.html" title="MISA-AKMC Users Manual" class="md-nav__button md-logo" aria-label="MISA-AKMC Users Manual">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -257,156 +279,105 @@
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
-    <label class="md-nav__link" for="nav-1">
-      首页
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="首页" data-md-level="1">
-      <label class="md-nav__title" for="nav-1">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+      
+      <label class="md-nav__link" for="nav-1">
         首页
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../.." class="md-nav__link">
-      概览
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../quick-start/" class="md-nav__link">
-      快速开始
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
-    <label class="md-nav__link" for="nav-2">
-      编译构建
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="编译构建" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="首页" data-md-level="1">
+        <label class="md-nav__title" for="nav-1">
+          <span class="md-nav__icon md-icon"></span>
+          首页
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        概览
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start.html" class="md-nav__link">
+        快速开始
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      
+      <label class="md-nav__link" for="nav-2">
         编译构建
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../build/prepare-environment/" class="md-nav__link">
-      准备环境
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../build/get-source-code/" class="md-nav__link">
-      获取源码
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../build/build/" class="md-nav__link">
-      编译
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    <label class="md-nav__link" for="nav-3">
-      运行
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="运行" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
-        运行
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        运行
         <span class="md-nav__icon md-icon"></span>
       </label>
+      <nav class="md-nav" aria-label="编译构建" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          编译构建
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
     
-    <a href="./" class="md-nav__link md-nav__link--active">
-      运行
-    </a>
-    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          准备环境
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="prepare-environment.html" class="md-nav__link md-nav__link--active">
+        准备环境
+      </a>
+      
+        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -418,15 +389,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1.运行
+  <a href="#cmake" class="md-nav__link">
+    CMake
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2.运行结果
+  <a href="#c" class="md-nav__link">
+    C++ 编译器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mpi" class="md-nav__link">
+    MPI环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkg" class="md-nav__link">
+    pkg
   </a>
   
 </li>
@@ -434,62 +419,137 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="get-source-code.html" class="md-nav__link">
+        获取源码
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="build.html" class="md-nav__link">
+        编译
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
-    <label class="md-nav__link" for="nav-4">
-      Reference
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Reference" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        运行
         <span class="md-nav__icon md-icon"></span>
-        Reference
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="运行" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          运行
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run/run.html" class="md-nav__link">
+        运行
+      </a>
+    </li>
+  
+
           
+        </ul>
+      </nav>
+    </li>
+  
 
+    
+      
+      
+      
 
-  <li class="md-nav__item">
-    <a href="../../reference/config-file/" class="md-nav__link">
-      配置文件
-    </a>
-  </li>
-
-        
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+      
+      <label class="md-nav__link" for="nav-4">
+        Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/config-file.html" class="md-nav__link">
+        配置文件
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/config-ref.html" class="md-nav__link">
+        配置项说明
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../reference/config-ref/" class="md-nav__link">
-      配置项说明
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+          
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -499,7 +559,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -514,15 +575,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1.运行
+  <a href="#cmake" class="md-nav__link">
+    CMake
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2.运行结果
+  <a href="#c" class="md-nav__link">
+    C++ 编译器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mpi" class="md-nav__link">
+    MPI环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkg" class="md-nav__link">
+    pkg
   </a>
   
 </li>
@@ -539,35 +614,42 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://git.hpcer.dev/HPCer/misa-akmc/users-manual/-/edit/master/docs/run/run.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://git.hpcer.dev/HPCer/misa-akmc/users-manual/-/edit/master/docs/build/prepare-environment.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>运行</h1>
+                  <h1>准备环境</h1>
                 
-                <p>我们假设你已通过上述步骤完成了 MISA-AKMC 的编译构建工作，编译完成的二进制可执行文件位于 <code>$AKMC_PATH/build/bin/</code> 目录下。</p>
-<h2 id="1">1.运行<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>你可以使用 <code>mpirun</code> 命令运行并行的 MISA-AKMC 分子动力学软件。例如，在下面的示例中，使用4个 MPI 进程运行 MISA-AKMC, 并指定配置文件路径为 <code>$AKMC_PATH/example/config.yaml</code> 文件。</p>
-<p>?&gt; 关于配置文件的相关说明可参考<a href="https://hpcer.pages.hpcer.dev/misa-akmc/users-manual/reference/reference/"><strong>配置项说明</strong></a>等相关章节。</p>
-<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>/example
-mpirun -n <span class="m">4</span> ../build/bin/pmisa-kmc -c config.yaml
-</code></pre></div>
-更多信息可以通过执行<code>$AKMC_PATH/build/bin/pmisa-kmc --help</code>命令查看。</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> <span class="nv">$AKMC_PATH</span>
-$ build/bin/pmisa-kmc --help
-  build/bin/pmisa-kmc <span class="o">{</span>OPTIONS<span class="o">}</span>
-
-    This is parallel misa-kmc program.
-
-  OPTIONS:
-
-      -h, --help                        Display this <span class="nb">help</span> menu
-      -c<span class="o">[</span>conf<span class="o">]</span>, --conf<span class="o">=[</span>conf<span class="o">]</span>           The configure file
-      -v, --version                     show version number
-</code></pre></div>
-<h2 id="2">2.运行结果<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>运行完成后， example 目录中会生成名为 kmc.*.out 的二进制文件( kmc.*.out 为默认的输出文件名称，可在配置文件中更改)。该文件中包含各个指定时间步 dump 的所有原子信息，如原子类型、位置坐标等。</p>
+                <p>在 Linux 上构建 MISA-AKMC 之前，请确保你的系统中已安装以下构建工具：</p>
+<ul>
+<li><a href="http://cmake.org">CMake</a>, 3.15 及以上版本;</li>
+<li>支持 C++11 特性的 C++ 编译器;</li>
+<li>MPI 环境;</li>
+<li><a href="https://github.com/genshen/pkg">pkg</a> C/C++ 依赖管理工具;</li>
+</ul>
+<h2 id="cmake">CMake<a class="headerlink" href="#cmake" title="Permanent link">&para;</a></h2>
+<p>如果你的系统中未安装CMake构建工具，请按照<a href="https://cmake.org/">相关文档</a>进行下载安装。</p>
+<h2 id="c">C++ 编译器<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
+<p>为了编译 MISA-AKMC 程序，要求你的系统上要已经安装了相关的 C++ 编译器。
+各类编译器对 C++11 特性的支持情况可参考<a href="http://zh.cppreference.com/w/cpp/compiler_support#cpp11}">相关文档</a>。</p>
+<p>我们测试过以下编译器可以正常工作：</p>
+<ul>
+<li>GUN g++ 5.1及以后版本</li>
+<li>LLVM Clang++ 3.3及以上版本</li>
+<li>Intel icc 2017</li>
+</ul>
+<h2 id="mpi">MPI环境<a class="headerlink" href="#mpi" title="Permanent link">&para;</a></h2>
+<p>要求你的系统中安装了支持 MPI 2.0 及以后标准的 MPI 环境。</p>
+<h2 id="pkg">pkg<a class="headerlink" href="#pkg" title="Permanent link">&para;</a></h2>
+<p>进入 <a href="https://github.com/genshen/pkg/releases">https://github.com/genshen/pkg/releases</a> ，
+下载对应架构，对应版本(一般为最新版本即可)的 pkg 文件到系统中，并确保pkg可执行程序在环境变量中。</p>
+<p>例如, 对于 64 位 amd64 架构的 Linux 操作系统：
+<div class="highlight"><pre><span></span><code>mkdir -p ~/.local/bin
+wget https://github.com/genshen/pkg/releases/download/v0.4.1/pkg-linux-amd64 -O ~/.local/bin/pkg
+chmod +x ~/.local/bin/pkg
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>~/.local/bin:<span class="nv">$PATH</span>
+</code></pre></div></p>
                 
                   
                 
@@ -588,7 +670,7 @@ $ build/bin/pmisa-kmc --help
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../build/build/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../quick-start.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -597,19 +679,19 @@ $ build/bin/pmisa-kmc --help
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                编译
+                快速开始
               </div>
             </div>
           </a>
         
         
-          <a href="../../reference/config-file/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="get-source-code.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                配置文件
+                获取源码
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -636,15 +718,15 @@ $ build/bin/pmisa-kmc --help
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.fd16492e.min.js"></script>
-      <script src="../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: "../..",
+          base: "..",
           features: ['navigation.tabs'],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
